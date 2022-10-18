@@ -1,0 +1,68 @@
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    color: white;
+}
+
+h2 {
+    padding: 10px;
+    font-size: 33px;
+}
+
+
+#title {
+    background: rgb(2,0,36);
+    background: linear-gradient(342deg, rgba(2,0,36,1) 0%, rgba(29,29,135,1) 35%, rgba(0,202,255,1) 100%);
+}
+
+.searchBar {
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#sBar {
+    width: 204px;
+}
+
+#sBtn {
+    width: 200px;
+}
+
+
+
+.container{
+ float: left;
+ background-color: rgba(0, 255, 255, 0.911);
+ max-width: 310px;
+ height: 100%;
+}
+
+
+
+#clearBtn {
+    float: right;
+}
+
+main {
+    float: left;
+}
+
+#sideWidth {
+    width: 280px;
+    float: left;
+    height: 100%;
+}
+main {
+
+}
+
+main div {
+    padding-left: 80px;
+}
+
+.tableMain {
+    height: 20px;
+}
+

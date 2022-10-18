@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="../Weather-Dashboard-WebPage/assets/css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Weather-Dashboard-WebPage/assets/css/style.css">
+</head>
+
+<body>
+    <header id="title">
+        <div>
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
+
+
+
+
+
+    <div class="container">
+        <aside class="col-md-3">
+            <div id="sideWidth">
+                <div>
+                    <h2>Search for a City:</h2>
+                </div>
+                <form class="example searchBar" action="action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search"/> <br>
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+                            <button class="btn btn-secondary my-2 my-sm-0" id="clearBtn"> Clear History</button>
+                </form>
+            </div>
+    </div>
+                <div class="container container-history searchHistoryEl"></div>
+        </aside>
+
+
+
+
+<main class="col-md-9">
+    <div>
+        <div>
+            <table class="tableMain">
+                <tr>
+                    <th><h2>Location</h2></th>
+                    <td>Date</td>
+                </tr>
+                <tr>
+                    <th>Temp:</th>
+                    <td>..</td>
+                </tr>
+                <tr>
+                    <th>Wind:</th>
+                    <td>..</td>
+                </tr>
+                <tr>
+                    <th>humidity:</th>
+                    <td>..</td>
+                </tr>
+                <tr>
+                    <th>UV Index:</th>
+                    <td>..</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+
+
+    <script src="../Weather-Dashboard-WebPage/assets/JavaScript/style.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</body>
+</html>
