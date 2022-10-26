@@ -11,6 +11,11 @@ h2 {
     font-size: 33px;
 }
 
+td {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
 
 #title {
     background: rgb(2,0,36);
@@ -47,6 +52,7 @@ h2 {
 
 main {
     float: left;
+    padding-right: 200px;
 }
 
 #sideWidth {
@@ -54,15 +60,38 @@ main {
     float: left;
     height: 100%;
 }
-main {
-
-}
-
-main div {
-    padding-left: 80px;
-}
 
 .tableMain {
     height: 20px;
 }
 
+.borderMain {
+    border: solid;
+    border-color: black;
+    border-width: 80%;
+    padding-left: 80px;
+    background-color: rgb(178, 178, 178);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgb(175, 175, 175);
+    width: 200px;
+    height: 300px;
+    color: white;
+    background-color: rgb(0, 0, 88);
+    margin: 20px;
+    
+}
+
+.textContainer {
+    padding: 8px;
+    text-align: left;
+    
+}
+
+.cardRow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    
+}
