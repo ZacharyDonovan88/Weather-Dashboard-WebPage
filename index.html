@@ -21,17 +21,16 @@
 
 
 
-
+<!-- search bar -->
     <div class="container">
         <aside class="col-md-3">
             <div id="sideWidth">
                 <div>
                     <h2>Search for a City:</h2>
                 </div>
-                <form class="example searchBar" action="action_page.php">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search"/> <br>
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
-                            <button class="btn btn-secondary my-2 my-sm-0" id="clearBtn"> Clear History</button>
+                <form>
+                    <input id="searchClick" type="text" placeholder="Search.." onsearch="fetchWeather()" /><button class="search" type="submit" id="searchBtn">Search</button> 
+                        <button class="" id="clearHistory"> Clear History</button>
                 </form>
             </div>
     </div>
@@ -40,34 +39,106 @@
 
 
 
-
+<!-- current weather -->
 <main class="col-md-9">
-    <div>
+    <div class="borderMain">
         <div>
             <table class="tableMain">
                 <tr>
-                    <th><h2>Location</h2></th>
-                    <td>Date</td>
+                    <th><h2><span id="city_current_data"></span>(<span id="date_current_data"></span>) <img id="img_current_data"></img></h2></th>
                 </tr>
                 <tr>
-                    <th>Temp:</th>
-                    <td>..</td>
+                    <th>Temp: <span id="temp_current_data"></span>°C</th>
                 </tr>
                 <tr>
-                    <th>Wind:</th>
-                    <td>..</td>
+                    <th>Wind: <span id="wind_current_data"></span>MPH</th>
                 </tr>
                 <tr>
-                    <th>humidity:</th>
-                    <td>..</td>
+                    <th>Humidity: <span id="humidity_current_data"></span>%</th>
                 </tr>
                 <tr>
-                    <th>UV Index:</th>
-                    <td>..</td>
+                    <th>UV Index: <span id="UV_current_data"></span></th>
                 </tr>
 
             </table>
         </div>
+    </div> <br>
+
+
+    <!-- 5 day forecast -->
+        <div>
+            <div>
+                <h3>5-Day Forecast:</h3>
+            </div>
+
+            <div class="cardRow">
+                <!-- day 1 -->
+                <div class="card">
+                    <div class="textContainer">
+                        <ul>
+                            <li><span id="date_current_data1"></span></li>
+                            <li><img id="img_current_data1"></img></li>
+                            <li>Temp: <span id="temp_current_data1"></span>°C</li>
+                            <li>Wind: <span id="wind_current_data1"></span>MPH</li>
+                            <li>Humidity: <span id="humidity_current_data1"></span>%</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- day 2 -->
+                <div class="card">
+                    <div class="textContainer">
+                        <ul>
+                            <li><span id="date_current_data2"></span></li>
+                            <li><img id="img_current_data2"></img></li>
+                            <li>Temp: <span id="temp_current_data2"></span>°C</li>
+                            <li>Wind: <span id="wind_current_data2"></span>MPH</li>
+                            <li>Humidity: <span id="humidity_current_data2"></span>%</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- day 3 -->
+                <div class="card">
+                    <div class="textContainer">
+                        <ul>
+                            <li><span id="date_current_data3"></span></li>
+                            <li><img id="img_current_data3"></img></li>
+                            <li>Temp: <span id="temp_current_data3"></span>°C</li>
+                            <li>Wind: <span id="wind_current_data3"></span>MPH</li>
+                            <li>Humidity: <span id="humidity_current_data3"></span>%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- day 4 -->
+                <div class="card">
+                    <div class="textContainer">
+                        <ul>
+                            <li><span id="date_current_data4"></span></li>
+                            <li><img id="img_current_data4"></img></li>
+                            <li>Temp: <span id="temp_current_data4"></span>°C</li>
+                            <li>Wind: <span id="wind_current_data4"></span>MPH</li>
+                            <li>Humidity: <span id="humidity_current_data4"></span>%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- day 5 -->
+                <div class="card">
+                    <div class="textContainer">
+                        <ul>
+                            <li><span id="date_current_data5"></span></li>
+                            <li><img id="img_current_data5"></img></li>
+                            <li>Temp: <span id="temp_current_data5"></span>°C</li>
+                            <li>Wind: <span id="wind_current_data5"></span>MPH</li>
+                            <li>Humidity: <span id="humidity_current_data5"></span>%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                </div>
+        </div>        
     </div>
 
 </main>
