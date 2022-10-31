@@ -21,4 +21,5 @@ This is a WebPage for users to inspect the weather.
 https://zacharydonovan88.github.io/Weather-Dashboard-WebPage/ 
 
 ## Screenshot
+![image](https://user-images.githubusercontent.com/109838413/199007771-ad98d392-0112-4d9c-9ed9-178c4f5822df.png)
 
