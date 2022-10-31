@@ -1,4 +1,4 @@
-
+/* general */
 h1 {
     text-align: center;
     padding: 20px;
@@ -15,31 +15,47 @@ td {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+/* end of general */
 
 
+/* header */
 #title {
     background: rgb(2,0,36);
     background: linear-gradient(342deg, rgba(2,0,36,1) 0%, rgba(29,29,135,1) 35%, rgba(0,202,255,1) 100%);
 }
+/* end of header */
 
+
+/* search/history section */
 .searchBar {
     padding: 10px;
     padding-left: 15px;
 }
 
-#sBar {
-    width: 204px;
-}
-
-#sBtn {
+#searchClick {
     width: 200px;
+    border-radius: 8px;
+    border: 2px solid;
 }
 
+#searchBtn {
+    width: 30px;
+    border-radius: 30px;
+    margin-left: 10px;
+    
+}
+
+#clearHistory {
+    border-radius: 8px;
+    border: 2px solid;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 130px;
+}
 
 
 .container{
  float: left;
- background-color: rgba(0, 255, 255, 0.911);
  max-width: 310px;
  height: 100%;
 }
@@ -61,8 +77,29 @@ main {
     height: 100%;
 }
 
+.historyList {
+    border:1px solid rgb(0, 0, 0); 
+    width:250px; 
+    height:300px; 
+    overflow-y:auto;
+    color: black;
+    border-radius: 10px;
+}
+
+#historyText {
+    padding: 15px;
+}
+
+aside li:hover {
+    
+    background-color:rgb(0, 255, 255);
+}
+/* end */
+
+/* current weather */
 .tableMain {
     height: 20px;
+    margin-bottom: 10px;
 }
 
 .borderMain {
@@ -72,7 +109,10 @@ main {
     padding-left: 80px;
     background-color: rgb(178, 178, 178);
 }
+/* end */
 
+
+/* 5 day forecast */
 .card {
     box-shadow: 0 4px 8px 0 rgb(175, 175, 175);
     width: 200px;
@@ -95,3 +135,41 @@ main {
     flex-direction: row ;
     
 }
+
+.red {
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    padding: 2px;
+    border-radius: 10px;
+    border-left-width: 12px;
+    border-right-width: 12px;
+}
+
+.orange {
+    background-color: rgb(255, 251, 0);
+    border: 1px solid rgb(255, 251, 0);
+    padding: 2px;
+    border-radius: 10px;
+    border-left-width: 12px;
+    border-right-width: 12px;
+}
+
+.yellow {
+    background-color: rgb(255, 251, 0);
+    border: 1px solid rgb(255, 251, 0);
+    padding: 2px;
+    border-radius: 10px;
+    border-left-width: 12px;
+    border-right-width: 12px;
+}
+
+.green {
+    background-color: rgb(0, 255, 0);
+    border: 1px solid rgb(255, 0, 0);
+    padding: 2px;
+    border-radius: 10px;
+    border-left-width: 12px;
+    border-right-width: 12px;
+}
+/* end */
+
