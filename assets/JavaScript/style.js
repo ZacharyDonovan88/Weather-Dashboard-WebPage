@@ -25,6 +25,7 @@ var recentSearches = [];
 console.log(recentSearches)
 function history() {
     recentSearches.push($(inputField).val()); 
+    localStorage.setItem('history', recentSearches);
     $(inputField).val(""); 
     $('#searchHistory').text(""); 
     
@@ -40,9 +41,16 @@ function addtotextbox(id)
 $(inputField).val(recentSearches[id]);
 }
 
+function populateFromLocalStorage() {
+    var cityHistoryArr = localStorage.getItem('history').split(',');
 
-
-
+    $(cityHistoryArr).each(function (index, value) {
+        recentSearches.push(value);
+     
+        $('#searchHistory').append("<li class='historyItem'  onclick='addtotextbox("+index+")'>" + value + '</li>');
+    })
+}
+populateFromLocalStorage();
 
 
 /*
@@ -186,27 +194,80 @@ function uvIndex() {
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data").innerHTML = uvIndex;
+if (parseInt(document.getElementById("UV_current_data").innerHTML) < 3) {
+    document.getElementById("UV_current_data").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data").innerHTML) < 6) {
+    document.getElementById("UV_current_data").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data").innerHTML) < 8) {
+    document.getElementById("UV_current_data").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 8) {
+    document.getElementById("UV_current_data").classList.add('red')
+}
 
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data1").innerHTML = uvIndex;
+if (parseInt(document.getElementById("UV_current_data1").innerHTML) < 3) {
+    document.getElementById("UV_current_data1").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 6) {
+    document.getElementById("UV_current_data1").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 8) {
+    document.getElementById("UV_current_data1").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 8) {
+    document.getElementById("UV_current_data1").classList.add('red')
+}
 
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data2").innerHTML = uvIndex;
+if (parseInt(document.getElementById("UV_current_data2").innerHTML) < 3) {
+    document.getElementById("UV_current_data2").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 6) {
+    document.getElementById("UV_current_data2").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 8) {
+    document.getElementById("UV_current_data2").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 8) {
+    document.getElementById("UV_current_data2").classList.add('red')
+}
 
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data3").innerHTML = uvIndex;
+if (parseInt(document.getElementById("UV_current_data3").innerHTML) < 3) {
+    document.getElementById("UV_current_data3").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 6) {
+    document.getElementById("UV_current_data3").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 8) {
+    document.getElementById("UV_current_data3").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 8) {
+    document.getElementById("UV_current_data3").classList.add('red')
+}
 
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data4").innerHTML = uvIndex;
+if (parseInt(document.getElementById("UV_current_data4").innerHTML) < 3) {
+    document.getElementById("UV_current_data4").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 6) {
+    document.getElementById("UV_current_data4").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 8) {
+    document.getElementById("UV_current_data4").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 8) {
+    document.getElementById("UV_current_data4").classList.add('red')
+}
 
 var uvIndex = Math.floor((Math.random() * 10) + 1);
 console.log(uvIndex);
 document.getElementById("UV_current_data5").innerHTML = uvIndex;
-
+if (parseInt(document.getElementById("UV_current_data5").innerHTML) < 3) {
+    document.getElementById("UV_current_data5").classList.add('green')
+} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 6) {
+    document.getElementById("UV_current_data5").classList.add('yellow')
+} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 8) {
+    document.getElementById("UV_current_data5").classList.add('orange')
+} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 8) {
+    document.getElementById("UV_current_data5").classList.add('red')
+}
 
 }
 uvIndex()
@@ -225,9 +286,11 @@ function uvColor(uvIndex) {
 }
 uvColor()
 
-
-
-
+$('#clearHistory').on('click', function (e) {
+    e.preventDefault();
+    localStorage.clear();
+    $('#searchHistory').empty();
+})
 
 
 
