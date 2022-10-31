@@ -29,12 +29,19 @@
                     <h2>Search for a City:</h2>
                 </div>
                 <form>
-                    <input id="searchClick" type="text" placeholder="Search.." onsearch="fetchWeather()" /><button class="search" type="submit" id="searchBtn">Search</button> 
+                    <input id="searchClick" autocomplete="off" type="text" placeholder="Search.."
+                    /><button class="search" type="submit" id="searchBtn"><i class="fa fa-search"></i></button> 
                         <button class="" id="clearHistory"> Clear History</button>
                 </form>
+                    <!-- history -->
+                    <div class="historyList">
+                        <div id="historyText">
+                            <ul id="searchHistory" ></ul>
+                        </div>
+                    </div>
             </div>
     </div>
-                <div class="container container-history searchHistoryEl"></div>
+
         </aside>
 
 
@@ -57,7 +64,7 @@
                     <th>Humidity: <span id="humidity_current_data"></span>%</th>
                 </tr>
                 <tr>
-                    <th>UV Index: <span id="UV_current_data"></span></th>
+                    <th>UV Index: <span class="uv_index" id="UV_current_data"></span></th>
                 </tr>
 
             </table>
@@ -81,6 +88,7 @@
                             <li>Temp: <span id="temp_current_data1"></span>°C</li>
                             <li>Wind: <span id="wind_current_data1"></span>MPH</li>
                             <li>Humidity: <span id="humidity_current_data1"></span>%</li>
+                            <li>UV Index: <span id="UV_current_data1"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -94,6 +102,7 @@
                             <li>Temp: <span id="temp_current_data2"></span>°C</li>
                             <li>Wind: <span id="wind_current_data2"></span>MPH</li>
                             <li>Humidity: <span id="humidity_current_data2"></span>%</li>
+                            <li>UV Index: <span id="UV_current_data2"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -107,6 +116,7 @@
                             <li>Temp: <span id="temp_current_data3"></span>°C</li>
                             <li>Wind: <span id="wind_current_data3"></span>MPH</li>
                             <li>Humidity: <span id="humidity_current_data3"></span>%</li>
+                            <li>UV Index: <span id="UV_current_data3"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -120,6 +130,7 @@
                             <li>Temp: <span id="temp_current_data4"></span>°C</li>
                             <li>Wind: <span id="wind_current_data4"></span>MPH</li>
                             <li>Humidity: <span id="humidity_current_data4"></span>%</li>
+                            <li>UV Index: <span id="UV_current_data4"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -133,6 +144,7 @@
                             <li>Temp: <span id="temp_current_data5"></span>°C</li>
                             <li>Wind: <span id="wind_current_data5"></span>MPH</li>
                             <li>Humidity: <span id="humidity_current_data5"></span>%</li>
+                            <li>UV Index: <span id="UV_current_data5"></span></li>
                         </ul>
                     </div>
                 </div>
