@@ -70,6 +70,9 @@ fetch(uvIndex)
 */                                              // *** UV index API has been deprecated from website *** //
 
 
+var time = "12:00";
+console.log(time)
+var time = moment(time);
 
 function fetchWeather(city) {
     var url5Day = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lon={lon}`
@@ -84,7 +87,7 @@ function fetchWeather(city) {
         cityEl.innerHTML = data.city.name;   
     
         var dateEl = document.getElementById('date_current_data');
-        dateEl.innerHTML = moment().format("MMM Do YY");
+        dateEl.innerHTML = moment().format("dddd, MMM Do YYYY");
      
         var imgEl = document.getElementById('img_current_data');
         imgEl.src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
@@ -104,7 +107,7 @@ function fetchWeather(city) {
     // 5 day forecast
        // day one
        var dateEl = document.getElementById('date_current_data1');
-       dateEl.innerHTML = moment().add(1, 'days').format("MMM Do YY");
+       dateEl.innerHTML = moment().add(1, 'days').set('hour', 12).set('minute', 0).format("dddd, MMM Do");
     
        var imgEl = document.getElementById('img_current_data1');
        imgEl.src = `http://openweathermap.org/img/wn/${data.list[6].weather[0].icon}@2x.png`
@@ -120,7 +123,7 @@ function fetchWeather(city) {
     
        // day two
        var dateEl = document.getElementById('date_current_data2');
-       dateEl.innerHTML = moment().add(2, 'days').format("MMM Do YY");
+       dateEl.innerHTML = moment().add(2, 'days').set('hour', 12).set('minute', 0).format("dddd, MMM Do");
     
        var imgEl = document.getElementById('img_current_data2');
        imgEl.src = `http://openweathermap.org/img/wn/${data.list[14].weather[0].icon}@2x.png`
@@ -136,7 +139,7 @@ function fetchWeather(city) {
     
        // day three
        var dateEl = document.getElementById('date_current_data3');
-       dateEl.innerHTML = moment().add(3, 'days').format("MMM Do YY");
+       dateEl.innerHTML = moment().add(3, 'days').set('hour', 12).set('minute', 0).format("dddd, MMM Do");
     
        var imgEl = document.getElementById('img_current_data3');
        imgEl.src = `http://openweathermap.org/img/wn/${data.list[21].weather[0].icon}@2x.png`
@@ -152,7 +155,7 @@ function fetchWeather(city) {
     
        // day four
        var dateEl = document.getElementById('date_current_data4');
-       dateEl.innerHTML = moment().add(4, 'days').format("MMM Do YY");
+       dateEl.innerHTML = moment().add(4, 'days').set('hour', 12).set('minute', 0).format("dddd, MMM Do");
     
        var imgEl = document.getElementById('img_current_data4');
        imgEl.src = `http://openweathermap.org/img/wn/${data.list[29].weather[0].icon}@2x.png`
@@ -168,7 +171,7 @@ function fetchWeather(city) {
     
        // day five
        var dateEl = document.getElementById('date_current_data5');
-       dateEl.innerHTML = moment().add(5, 'days').format("MMM Do YY");
+       dateEl.innerHTML = moment().add(5, 'days').set('hour', 12).set('minute', 0).format("dddd, MMM Do");
     
        var imgEl = document.getElementById('img_current_data5');
        imgEl.src = `http://openweathermap.org/img/wn/${data.list[37].weather[0].icon}@2x.png`
@@ -189,88 +192,88 @@ fetchWeather('adelaide');
 
 
 
-function uvIndex() {
+    function uvIndex() {
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data").innerHTML) < 3) {
-    document.getElementById("UV_current_data").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data").innerHTML) < 6) {
-    document.getElementById("UV_current_data").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data").innerHTML) < 8) {
-    document.getElementById("UV_current_data").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 8) {
-    document.getElementById("UV_current_data").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data").innerHTML) < 3) {
+            document.getElementById("UV_current_data").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data").innerHTML) < 6) {
+            document.getElementById("UV_current_data").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data").innerHTML) < 8) {
+            document.getElementById("UV_current_data").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data").innerHTML) >= 8) {
+            document.getElementById("UV_current_data").classList.add('red')
+        }
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data1").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data1").innerHTML) < 3) {
-    document.getElementById("UV_current_data1").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 6) {
-    document.getElementById("UV_current_data1").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 8) {
-    document.getElementById("UV_current_data1").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 8) {
-    document.getElementById("UV_current_data1").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data1").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data1").innerHTML) < 3) {
+            document.getElementById("UV_current_data1").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 6) {
+            document.getElementById("UV_current_data1").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data1").innerHTML) < 8) {
+            document.getElementById("UV_current_data1").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data1").innerHTML) >= 8) {
+            document.getElementById("UV_current_data1").classList.add('red')
+        }
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data2").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data2").innerHTML) < 3) {
-    document.getElementById("UV_current_data2").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 6) {
-    document.getElementById("UV_current_data2").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 8) {
-    document.getElementById("UV_current_data2").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 8) {
-    document.getElementById("UV_current_data2").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data2").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data2").innerHTML) < 3) {
+            document.getElementById("UV_current_data2").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 6) {
+            document.getElementById("UV_current_data2").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data2").innerHTML) < 8) {
+            document.getElementById("UV_current_data2").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data2").innerHTML) >= 8) {
+            document.getElementById("UV_current_data2").classList.add('red')
+        }
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data3").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data3").innerHTML) < 3) {
-    document.getElementById("UV_current_data3").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 6) {
-    document.getElementById("UV_current_data3").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 8) {
-    document.getElementById("UV_current_data3").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 8) {
-    document.getElementById("UV_current_data3").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data3").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data3").innerHTML) < 3) {
+            document.getElementById("UV_current_data3").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 6) {
+            document.getElementById("UV_current_data3").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data3").innerHTML) < 8) {
+            document.getElementById("UV_current_data3").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data3").innerHTML) >= 8) {
+            document.getElementById("UV_current_data3").classList.add('red')
+        }
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data4").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data4").innerHTML) < 3) {
-    document.getElementById("UV_current_data4").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 6) {
-    document.getElementById("UV_current_data4").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 8) {
-    document.getElementById("UV_current_data4").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 8) {
-    document.getElementById("UV_current_data4").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data4").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data4").innerHTML) < 3) {
+            document.getElementById("UV_current_data4").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 6) {
+            document.getElementById("UV_current_data4").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data4").innerHTML) < 8) {
+            document.getElementById("UV_current_data4").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data4").innerHTML) >= 8) {
+            document.getElementById("UV_current_data4").classList.add('red')
+        }
 
-var uvIndex = Math.floor((Math.random() * 10) + 1);
-console.log(uvIndex);
-document.getElementById("UV_current_data5").innerHTML = uvIndex;
-if (parseInt(document.getElementById("UV_current_data5").innerHTML) < 3) {
-    document.getElementById("UV_current_data5").classList.add('green')
-} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 6) {
-    document.getElementById("UV_current_data5").classList.add('yellow')
-} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 8) {
-    document.getElementById("UV_current_data5").classList.add('orange')
-} else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 8) {
-    document.getElementById("UV_current_data5").classList.add('red')
-}
+        var uvIndex = Math.floor((Math.random() * 10) + 1);
+        console.log(uvIndex);
+        document.getElementById("UV_current_data5").innerHTML = uvIndex;
+        if (parseInt(document.getElementById("UV_current_data5").innerHTML) < 3) {
+            document.getElementById("UV_current_data5").classList.add('green')
+        } else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 3 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 6) {
+            document.getElementById("UV_current_data5").classList.add('yellow')
+        } else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 6 && parseInt(document.getElementById("UV_current_data5").innerHTML) < 8) {
+            document.getElementById("UV_current_data5").classList.add('orange')
+        } else if (parseInt(document.getElementById("UV_current_data5").innerHTML) >= 8) {
+            document.getElementById("UV_current_data5").classList.add('red')
+        }
 
-}
-uvIndex()
+        }
+        uvIndex()
 
 
 function uvColor(uvIndex) {
